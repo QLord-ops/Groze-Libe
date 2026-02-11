@@ -13,11 +13,19 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === '/') {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-ink-950/85 backdrop-blur-xl border-b border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 sm:h-20">
         <Link
           to="/"
+          onClick={handleLogoClick}
           className="font-display text-xl sm:text-2xl text-gold-400 font-semibold tracking-tight hover:text-gold-300 transition-colors"
         >
           Die Große Liebe

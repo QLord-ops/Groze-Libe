@@ -108,6 +108,10 @@ export default function Menu() {
                             src={item.image}
                             alt={item.name}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement
+                              target.src = 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=85&fit=crop'
+                            }}
                           />
                         </div>
                         <div className="p-5 sm:p-6">
