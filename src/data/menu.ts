@@ -12,9 +12,6 @@ export interface MenuCategory {
   items: MenuItem[]
 }
 
-const U = (id: string, w = 800) =>
-  `https://images.unsplash.com/photo-${id}?w=${w}&q=85&fit=crop`
-
 export const menuCategories: MenuCategory[] = [
   {
     id: 'rindsburger',

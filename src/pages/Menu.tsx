@@ -3,7 +3,7 @@ import { menuCategories } from '../data/menu'
 import AnimateOnScroll from '../components/AnimateOnScroll'
 
 export default function Menu() {
-  const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({})
+  const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
   const [activeId, setActiveId] = useState<string>(menuCategories[0]?.id ?? '')
 
   useEffect(() => {
